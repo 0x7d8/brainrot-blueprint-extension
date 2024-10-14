@@ -1,0 +1,15 @@
+info:
+  name: "Brainrot"
+  identifier: "brainrot"
+  description: "The best brainrot extension out there."
+  version: "1.0.0"
+  icon: "icon.jpg"
+  target: "beta-2024-08"
+  author: "0x7d8"
+
+admin:
+  view: "view.blade.php"
+  controller: "controller.php"
+
+dashboard:
+  wrapper: "wrap/dashboard.blade.php"
