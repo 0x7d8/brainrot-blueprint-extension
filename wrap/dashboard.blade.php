@@ -22,7 +22,11 @@
     $type = 'none';
   }
 
-  $video = $type == 'random' ? $brainrots[array_rand($brainrots)] : $brainrots[$type];
+  if ($type) {
+    $video = $type == 'random' ? $brainrots[array_rand($brainrots)] : $brainrots[$type];
+  } else {
+    $video = '';
+  }
 ?>
 
 <style>
@@ -65,7 +69,7 @@
   }
 </style>
 
-@if ($type != 'none')
+@if ($type != 'none' && $video)
   <div class="brainrotVideo">
     <p class="brainrotX">x</p>
 
