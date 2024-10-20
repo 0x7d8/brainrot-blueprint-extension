@@ -32,6 +32,10 @@ class brainrotExtensionController extends Controller
 		$type = $request->input('type');
 		$this->blueprint->dbSet('brainrot', 'type', $type);
 
+		if ($custom) {
+			$this->blueprint->dbSet('brainrot', 'custom', $custom);
+		}
+
 		return $this->view->make(
 			'admin.extensions.{identifier}.index', [
 				'root' => '/admin/extensions/{identifier}',
@@ -46,8 +50,8 @@ class brainrotSettingsFormRequest extends AdminFormRequest
   public function rules(): array
   {
     return [
-      'type' => 'required|string|in:none,random,subwaysurfers,minecraft,andrewtate,slime,memes,skibiditoilet,gegagedigedagedago,custom',
-      'custom' => 'nullable|string',
+	'type' => 'required|string|in:none,random,subwaysurfers,minecraft,andrewtate,slime,memes,skibiditoilet,gegagedigedagedago',
+	'custom' => 'nullable|string',
     ];
   }
 }
