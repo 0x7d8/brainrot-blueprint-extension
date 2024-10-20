@@ -32,6 +32,7 @@ class brainrotExtensionController extends Controller
 		$type = $request->input('type');
 		$this->blueprint->dbSet('brainrot', 'type', $type);
 
+		$custom = $request->input('custom');
 		if ($custom) {
 			$this->blueprint->dbSet('brainrot', 'custom', $custom);
 		}
