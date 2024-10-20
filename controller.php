@@ -51,7 +51,7 @@ class brainrotSettingsFormRequest extends AdminFormRequest
   public function rules(): array
   {
     return [
-	'type' => 'required|string|in:none,random,subwaysurfers,minecraft,andrewtate,slime,memes,skibiditoilet,gegagedigedagedago',
+	'type' => 'required|string|in:none,random,subwaysurfers,minecraft,andrewtate,slime,memes,skibiditoilet,gegagedigedagedago,custom',
 	'custom' => 'nullable|string',
     ];
   }
